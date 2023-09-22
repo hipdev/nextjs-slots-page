@@ -11,18 +11,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
                                        children,
-                                       analytics,
+                                       team,
                                        dashboard
                                    }: {
     children: React.ReactNode
-    analytics: React.ReactNode
+    team: React.ReactNode
     dashboard: React.ReactNode
 }) {
     return (
         <html lang="en">
-        <body className={inter.className}>
-        {analytics}{dashboard}
-        {children}</body>
+            <body className={inter.className}>
+                <div> {team}</div>
+                <div> {dashboard}</div>
+                <div> {children}</div>
+            </body>
         </html>
     )
 }
